@@ -15,6 +15,7 @@ def register_view(request):
 def login_view(request):
     return render(request, 'login.html')
 
+
 def index(request):
     total_bags = Donation.objects.aggregate(total_quantity=models.Sum('quantity'))['total_quantity'] or 0
     supported_institutions = Institution.objects.count()
