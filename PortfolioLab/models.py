@@ -29,6 +29,3 @@ class Donation(models.Model):
 
     def __str__(self):
         return f"Donation of {self.quantity} bags to {self.institution}"
-
-class Bag(models.Model):
-    quantity = models.IntegerField()
